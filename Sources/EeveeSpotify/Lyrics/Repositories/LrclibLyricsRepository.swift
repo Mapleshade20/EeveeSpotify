@@ -20,9 +20,7 @@ struct LrcLibLyricsRepository: LyricsRepository {
         var stringUrl = "\(apiUrl)\(path)"
 
         if !query.isEmpty {
-            let queryString = query.queryString.addingPercentEncoding(
-                withAllowedCharacters: .urlHostAllowed
-            )!
+            let queryString = query.queryString
 
             stringUrl += "?\(queryString)"
         }
